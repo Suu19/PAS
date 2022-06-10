@@ -1,0 +1,120 @@
+<!-- djangotemplates/example/templates/index.html-->
+
+
+<!-- {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JFEラベル検査結果</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+</head>
+<body>
+  <h1 align="center">JFEラベル検査結果詳細</h1>
+  
+  <table border="1" align="center">
+    <thead>
+     <th>Image</th>
+        <th>JISマーク</th>
+        <th>JISコード①</th>
+        <th>JISコード②</th>
+        <th>QRコード</th>
+    </thead>
+    <tr>
+    
+        <td> 
+        {{images.image_id}} {{id}}
+        </td>
+       
+        <td><img src="{% static images.image_path %}" width="300" height="300"></td>
+        <td>{{images.jis_result}}</td>
+        <td>{{images.qr_result}}</td>
+       
+    </tr>
+    </table><br>
+    
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width" initial-scale="1.0">
+        <title>JFE 検査システム</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        {% load static %}
+        <div class="topper">
+                <label>メニュー</label>
+                <label>Version</label>
+        </div>
+        <div class="top">
+            <div>ラベル検査システム</div>
+            <div>総合判定     <button class="button">OK</button></div>
+            
+        </div>
+        <div class="wrapper">
+            
+        <div class="image-holder">
+           <img src="{% static images.image_path %}" class="image-holder">
+           部品ラベル
+        </div>
+            <div class="data">
+                <div class="contents">
+                    <div class="content-header">検査項目</div>
+                    <div class="contents-holder">JISマーク</div>
+                    <div class="contents-holder">JISコード①</div>
+                    <div class="contents-holder">JISコード②</div>
+                    <div class="contents-holder">規格</div>
+                    <div class="contents-holder">寸法</div>
+                    <div class="contents-holder">長さ</div>
+                    <div class="contents-holder">本数</div>
+                    <div class="contents-holder">質量</div>
+                    <div class="contents-holder">板</div>
+                    <div class="contents-holder">結束番号</div>
+                    <div class="contents-holder">QRコード</div>
+                    
+                </div>
+                <div class="value">
+                    <div class="content-header">読込結果</div>
+                    <div class="value-holder">{{images.image_id}}</div>
+                    <div class="value-holder">{{images.jis_result}}</div>
+                    <div class="value-holder">{{images.qr_result}}</div>
+                    <div class="value-holder"></div>
+                    <div class="value-holder"></div>
+                    <div class="value-holder"></div>
+                    <div class="value-holder"></div>
+                    <div class="value-holder"></div>
+                    <div class="value-holder"></div>
+                    <div class="value-holder"></div>
+                    <div class="value-holder"></div>
+
+                </div>
+                <div class="result">
+                    <div class="content-header">判定</div>
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    <div ><button class="result-button-green"></button></div>
+                    <div ><button class="result-button-green"></button></div>
+                    <div ><button class="result-button-green"></button></div>                 
+                    <div ><button class="result-button-green"></button></div>
+                    <div ><button class="result-button-green">OK</button></div>
+                    <div ><button class="result-button-green"></button></div>
+                    <div ><button class="result-button-green"></button></div>
+                    <div ><button class="result-button-green"></button></div>                 
+                    <div ><button class="result-button-green"></button></div>
+                    
+
+
+
+                </div>
+            </div>
+        </div>
+       
+           
+       
+    
+    </body>
+</html>
