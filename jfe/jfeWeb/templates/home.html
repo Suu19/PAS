@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JFE 検査ラベルシステム</title>
+ {% load static %}
+</head>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> 
+<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  -->
+<body>
+
+
+    <div style="display:flex;align-content:space-between;justify-content:space-between;background-color: #268B7C;height:10vh;padding-left: 25px;padding-top: 25px;font-size: 25px;padding-right: 10px;" >
+        <a href="{% url 'home' %}"> メニュー </a>
+        <img src="{% static 'css/画像1.png' %}" width="400px" height="50px">
+    </div>
+    
+    <div class="row" style="background-color:rgb(159, 202, 200);padding-left:2%;padding-bottom: 50%;padding-right: 10px; ">
+    {% for i in data %}
+    <div class="mid-col-2">
+     <a href="{% url 'list' id=i.last_update %}">   {{i.last_update}}</a>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
+

@@ -1,0 +1,154 @@
+.topper{
+    margin-top: 0%;
+    height: 3vh;
+    background: rgb(38, 139, 124);
+    padding-left: 10vh;
+    padding-top: 2vh;
+    padding-right: 2vh;
+    padding-bottom: 2vh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;   
+    column-gap: 2em;
+    
+}
+.top{
+    display: flex;
+    margin-top: 0%;
+    background: rgb(159, 202, 200);
+    height: 8vh;
+    font-size: 30px; 
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+.button{
+    background: rgb(205, 209, 209);
+    font-size: 45px;
+}
+.image{
+    width: 60vh;
+    background: rgb(159, 202, 200);
+    margin-left: 0%;
+    padding-right: 0%;
+    height: 200vh;
+}
+.image-holder{
+    width: 300px;
+    height: 400px;
+    font-size: 35px;
+    padding-top: 10px;
+}
+
+.data{
+    display: flex;
+    width: 1000px;
+    font-family: myJapaneseFont;
+    background: rgb(149, 167, 185);
+    height: 700px;
+    justify-content: stretch;
+}
+.contents{
+ display: grid;
+ row-gap: 1em;
+ width: 150px;
+ height: 700px;
+ background: rgb(149, 167, 185);
+ padding-left: 30px;
+ padding-top: 10px;
+ padding-bottom: 5px;
+}
+.contents-holder{
+    font-size: 20px;
+    /* border: 1px solid black;    */
+    height: 25px;
+    padding-left: 5px;
+    padding-bottom:5px;
+   
+}
+.contents-header{
+    font-size: 18x;      
+    height: 30px;
+    padding-left: 5px;
+    padding-bottom:5px;
+    padding-top: 0px;
+   
+}
+.value{
+    display: grid;
+    width: 450px;
+    row-gap: 1em;
+    background: rgb(149, 167, 185);
+    height: 700px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    
+}
+.value-holder{
+    font-size: 20px;
+    padding-left: 5px;
+    padding-bottom:5px;
+    height: 30px;
+    background: white;
+
+}
+.value-header{
+    font-size: 20px;
+    padding-left: 5px;
+    padding-bottom:5px;
+    height: 40px;
+    background: white;
+
+}
+.result{
+    display: grid; 
+    width: 250px;
+    row-gap: 1.1em;
+    background: rgb(149, 167, 185);
+    height: 700px;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+.result-button-green{
+    background-color: rgb(150, 202, 53);
+    font-size: 30px;
+    width: 100px;
+    height: 45px;
+}
+.result-button-blank{
+    background-color: rgb(149, 167, 185);
+    font-size: 30px;
+    width: 100px;
+    height: 45px;
+    border-color: rgb(149, 167, 185);
+}
+.result-button-red{
+    background-color: red;
+    font-size: 30px;
+    width: 100px;
+    height: 50px;
+}
+.content-header{
+    font-size: 35px;
+    font-style: bold;
+}
+
+.wrapper{
+    display: flex;
+    background: rgb(149, 167, 185);
+    height: 800px;
+    margin-top: 0%;
+    justify-content: center;
+    column-gap: 5em;
+    align-items: stretch;
+    padding-left: 10%;
+    padding-top: 2%; 
+    
+
+}
+@font-face {
+    font-family: myJapanesefont;
+    src: url(myJapaneseFont.ttf);
+}

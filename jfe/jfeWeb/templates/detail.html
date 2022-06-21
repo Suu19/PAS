@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width" initial-scale="1.0">
+        <title>JFE 検査システム</title>
+        <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+        
+    </head>
+    <body>
+        {% load static %}
+        
+    <div style="background-color:#268B7C;height:3vh;padding-left: 25px;padding-top: 5px;padding-bottom:5px;font-size: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;" >
+        <a href="{% url 'home' %}"> メニュー </a>
+        
+    </div>
+        <div class="top">
+            <div>ラベル検査システム</div>
+            <div>総合判定      {% if not data.sougou_hantei %}
+               <button class="result-button-green" width="50px"> OK </button>
+                {% else %}
+                <button class="result-button-red" width="50px"> NG </button>
+                {% endif %}</div>
+            
+        </div>
+        <div class="wrapper">
+            
+        <div class="image-holder">
+            <img src="{% static 'image/'|add:data.qrcode_data|add:'.png' %}" width="400" height="500"> 
+           
+           部品ラベル
+        </div>
+        
+            <div class="data">
+                <div class="contents">
+                    <div class="content-header">検査項目</div>
+                    <div class="contents-header">2Dコード読み取りデータ</div>
+                    <div class="contents-holder">規格</div>
+                    <div class="contents-holder">寸法</div>
+                    <div class="contents-holder">長さ</div>
+                    <div class="contents-holder">本数</div>
+                    <div class="contents-holder">質量判定無し</div>
+                    <div class="contents-holder">鋼板判定無し</div>
+                    <div class="contents-holder">結束番号</div>
+                    <div class="contents-holder">JICQA</div>
+                    <div class="contents-holder">QA0306011</div>
+                   
+                </div>
+                <div class="value">
+                    <div class="content-header">読込結果</div>
+                    <div class="value-header">{{data.qrcode_data}}</div>
+                    <div class="value-holder">{{data.kikaku}}</div>
+                    <div class="value-holder">{{data.sunpou}}</div>
+                    <div class="value-holder">{{data.nagasa}}</div>
+                    <div class="value-holder">{{data.honsuu}}</div>
+                    <div class="value-holder">{{data.shitsuryou}}</div>
+                    <div class="value-holder">{{data.kouhann}}</div>
+                    <div class="value-holder">{{data.kessoku_bangou}}</div>
+                    <div class="value-holder">{{data.jicqa}}</div>
+                    <div class="value-holder">{{data.qa0306011}}</div>
+                    
+
+                </div>
+                <div class="result">
+                    <div class="content-header">判定</div>
+
+                    <div ><button class="result-button-blank" width="50px">  </button></div>
+
+                    {% if not data.kikaku_hantei %}
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    {% else %}
+                    <div ><button class="result-button-red" width="50px"> NG </button></div>
+                    
+                    {% endif %}
+                   
+                    {% if not data.sunpou_hantei %}
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    {% else %}
+                    <div ><button class="result-button-red" width="50px"> NG </button></div>
+                    {% endif %}
+
+                    {% if not data.nagasa_hantei %}
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    {% else %}
+                    <div ><button class="result-button-red" width="50px"> NG </button></div>
+                    {% endif %}
+
+                    {% if not data.honsuu_hantei %}
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    {% else %}
+                    <div ><button class="result-button-red" width="50px"> NG </button></div>
+                    {% endif %}
+
+                 
+                   
+                    <div ><button class="result-button-blank" width="50px">  </button></div>
+                   
+                    <div ><button class="result-button-blank" width="50px">  </button></div>
+                    
+
+                    {% if not data.kessoku_hantei %}
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    {% else %}
+                    <div ><button class="result-button-red" width="50px"> NG </button></div>
+                    {% endif %}
+
+                    {% if not data.suuchi_keisan_hantei %}
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    {% else %}
+                    <div ><button class="result-button-red" width="50px"> NG </button></div>
+                    {% endif %}
+
+                    {% if not data.kikaku_hantei %}
+                    <div ><button class="result-button-green" width="50px"> OK </button></div>
+                    {% else %}
+                    <div ><button class="result-button-red" width="50px"> NG </button></div>
+                    {% endif %}
+
+
+
+                </div>
+            </div>
+        </div>
+       
+           
+       
+    
+    </body>
+</html>
